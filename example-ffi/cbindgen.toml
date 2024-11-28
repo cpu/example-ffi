@@ -1,0 +1,2 @@
+include_guard = "EXAMPLE_FFI_H"
+language = "C"

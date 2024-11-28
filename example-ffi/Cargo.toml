@@ -1,0 +1,24 @@
+[package]
+name = "example-ffi"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+capi = []
+
+[lib]
+crate-type = ["lib", "staticlib"]
+
+[package.metadata.capi.header]
+name = "example-ffi"
+subdirectory = false
+generation = true
+
+[package.metadata.capi.library]
+name = "example-ffi"
+version_suffix_components = 3
+rustflags = "-Cmetadata=example-ffi"
+
+[package.metadata.capi.pkg_config]
+name = "example-ffi"
+filename = "example-ffi"
